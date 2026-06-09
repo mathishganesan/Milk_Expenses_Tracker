@@ -17,7 +17,8 @@ public class Main {
 			System.out.println("4. Delete Entry");
 			System.out.println("5. Total Milk Consumed");
 			System.out.println("6. Total Expense");
-			System.out.println("7. Exit");
+			System.out.println("7. Monthly Expense Report");
+			System.out.println("8. Exit");
 			
 			try {
 				System.out.println("Enter your Choice : ");
@@ -56,7 +57,12 @@ public class Main {
 				mm.totalExpense();
 				break;
 				
+				
 			case 7:
+				mm.calculateMonthlyExpense();
+				break;
+				
+			case 8:
 				System.out.println("Thank you!!!");
 				System.out.println("Program Exited...");
 				scan.close();

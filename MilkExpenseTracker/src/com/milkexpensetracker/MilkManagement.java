@@ -149,4 +149,18 @@ public class MilkManagement {
 			System.out.println("Something Went Wrong!!!");
 		}
 	}
+	
+	public void calculateMonthlyExpense() {
+		double totalMilk=0;
+		double totalExpense=0;
+		
+		for(MilkEntry entry: entries) {
+			double dailyMilk = entry.getMorningMilk()+entry.getEveningMilk();
+			totalMilk += dailyMilk;
+			
+			totalExpense += dailyMilk * entry.getPricePerLiter();
+			}
+		  System.out.println("Total Milk in Month: " + totalMilk + " L");
+		  System.out.println("Total Expense in Month: ₹" + totalExpense);
+	}
 }
